@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyScript : MonoBehaviour {
+public class EnemyController : MonoBehaviour {
 
 	public float fireRate = 2f;
 	public int attackDamage = 1;

@@ -24,8 +24,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 445792}
   - 212: {fileID: 21257624}
-  - 114: {fileID: 11456784}
   - 61: {fileID: 6161238}
+  - 114: {fileID: 11417010}
   m_Layer: 0
   m_Name: Pawn
   m_TagString: Enemy
@@ -72,7 +72,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.92, y: 0.83}
---- !u!114 &11456784
+--- !u!114 &11417010
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 199386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d891917f40aab449ff71c808ee07a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bd4b1899dddd154285ce891d698edff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 2
@@ -91,6 +91,8 @@ MonoBehaviour:
   currentDirection: 0
   spawnControl: {fileID: 152858, guid: b5de64e9223bdd54c864048000df6695, type: 2}
   LayerID: 0
+  verticalTimeDelay: 5
+  maxVerticalTimeDelay: 5
 --- !u!212 &21257624
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -144,6 +146,10 @@ Prefab:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bulletSpawnPos
+      value: 
+      objectReference: {fileID: 463658}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 199386}

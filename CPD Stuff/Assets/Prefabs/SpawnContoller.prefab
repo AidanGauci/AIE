@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 467346}
   - 114: {fileID: 11407908}
+  - 114: {fileID: 11483280}
   m_Layer: 0
   m_Name: SpawnContoller
   m_TagString: Untagged
@@ -46,6 +47,22 @@ MonoBehaviour:
   - {fileID: 135382, guid: 0d538b0d8ec3c3946879432fe4153560, type: 2}
   - {fileID: 110584, guid: 5f40d4eb6a10d0b4a951d6c3b21a247a, type: 2}
   aliveEnemies: 0
+--- !u!114 &11483280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ded2ebe1b9d6842a6e8d402df19a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawnPos: {fileID: 0}
+  bullet: {fileID: 0}
+  currentDirection: 0
+  spawnControl: {fileID: 0}
+  LayerID: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
