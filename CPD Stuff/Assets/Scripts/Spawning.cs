@@ -4,14 +4,16 @@ using System.Collections;
 public class Spawning : MonoBehaviour {
 
 	public GameObject[] enemies;
+	public GameObject player;
 	public int aliveEnemies = 0;
-	private int currentLevel = 1;
+	private int currentLevel = 0;
 	private int maxLevel = 5;
 	private bool b_LoadingLevel = false;
 	private int currentMoveDir = -1;
 
 	// Use this for initialization
 	void Start () {
+		LoadPlayer ();
 		LoadNextLevel ();
 	}
 	
@@ -28,6 +30,11 @@ public class Spawning : MonoBehaviour {
 		currentMoveDir *= -1;
 	}
 
+
+	public void LoadPlayer()
+	{
+		GameObject newPlayer = Instantiate (player, new Vector3 (0, -3, 0), Quaternion.Euler (0, 0, 180)) as GameObject;
+	}
 	public void LoadNextLevel()
 	{
 		b_LoadingLevel = true;

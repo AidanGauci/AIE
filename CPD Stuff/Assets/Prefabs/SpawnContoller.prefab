@@ -46,6 +46,7 @@ MonoBehaviour:
   - {fileID: 101474, guid: dfc2725736a0ea34289a921c30598444, type: 2}
   - {fileID: 135382, guid: 0d538b0d8ec3c3946879432fe4153560, type: 2}
   - {fileID: 110584, guid: 5f40d4eb6a10d0b4a951d6c3b21a247a, type: 2}
+  player: {fileID: 157768, guid: 03181b816c4c00343af6754db265e55c, type: 2}
   aliveEnemies: 0
 --- !u!114 &11483280
 MonoBehaviour:

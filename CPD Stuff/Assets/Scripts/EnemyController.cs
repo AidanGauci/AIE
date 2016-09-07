@@ -11,9 +11,11 @@ public class EnemyController : MonoBehaviour {
 	public int currentDirection;
 	public GameObject spawnControl;
 	public int LayerID;
+	public float directionChangeDelay = 1f;
+	public float timeSinceFlip = 0;
+	public float verticalTimeDelay = 10f;
 
-	public float verticalTimeDelay = 5f;
-	public float maxVerticalTimeDelay = 5f;
+	private float maxVerticalTimeDelay = 10f;
 	private float fireDelay;
 	private Spawning spawnLink;
 
@@ -27,10 +29,13 @@ public class EnemyController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		verticalTimeDelay -= Time.deltaTime;
-		if (health == 0)
+		if (timeSinceFlip < 0)
 		{
-			spawnLink.aliveEnemies--;
-			Destroy (this);
+			timeSinceFlip = 0;
+		}
+		else
+		{
+			timeSinceFlip -= Time.deltaTime;
 		}
 	}
 
@@ -39,6 +44,17 @@ public class EnemyController : MonoBehaviour {
 		Debug.Log ("Fire");
 		//Instantiate (bullet, bulletSpawnPos.position, Quaternion.identity);
 		Invoke("FireBullet", fireRate);
+	}
+
+	public bool CheckIfDead()
+	{
+		if (health == 0)
+		{
+			spawnLink.aliveEnemies--;
+			Destroy (this);
+			return true;
+		}
+		return false;
 	}
 
 	IEnumerator MoveDown()

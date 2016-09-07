@@ -31,8 +31,10 @@ public class SquadController : MonoBehaviour {
 				currentEnemy.StartCoroutine("MoveDown");
 			}
 			if (currentEnemy.transform.position.x < -screenHalfWidthInWorldUnits ||
-				currentEnemy.transform.position.x > screenHalfWidthInWorldUnits)
+				currentEnemy.transform.position.x > screenHalfWidthInWorldUnits &&
+				currentEnemy.timeSinceFlip <= 0)
 			{
+				currentEnemy.timeSinceFlip = currentEnemy.directionChangeDelay;
 				currentEnemy.currentDirection *= -1;
 				ChangeDirIfYSame (currentEnemy);
 			}
@@ -43,6 +45,11 @@ public class SquadController : MonoBehaviour {
 			EnemyController currentEnemy = activeEnemies [i];
 			float moveAmount = (1 * currentEnemy.currentDirection) * Time.deltaTime;
 			currentEnemy.transform.position += new Vector3 (moveAmount, 0, 0);
+
+			if (currentEnemy.CheckIfDead ())
+			{
+				i--;
+			}
 		}
 	}
 
