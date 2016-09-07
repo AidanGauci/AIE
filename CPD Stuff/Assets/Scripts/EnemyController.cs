@@ -29,7 +29,11 @@ public class EnemyController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		verticalTimeDelay -= Time.deltaTime;
+<<<<<<< HEAD
 		if (timeSinceFlip < 0)
+=======
+		if (health <= 0)
+>>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
 		{
 			timeSinceFlip = 0;
 		}
@@ -41,8 +45,8 @@ public class EnemyController : MonoBehaviour {
 
 	void FireBullet()
 	{
-		Debug.Log ("Fire");
-		//Instantiate (bullet, bulletSpawnPos.position, Quaternion.identity);
+		//Debug.Log ("Fire");
+		Instantiate (bullet, bulletSpawnPos.position, Quaternion.identity);
 		Invoke("FireBullet", fireRate);
 	}
 
