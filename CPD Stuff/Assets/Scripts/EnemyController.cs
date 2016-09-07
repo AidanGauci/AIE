@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		verticalTimeDelay -= Time.deltaTime;
-		if (health == 0)
+		if (health <= 0)
 		{
 			spawnLink.aliveEnemies--;
 			Destroy (this);
@@ -36,8 +36,8 @@ public class EnemyController : MonoBehaviour {
 
 	void FireBullet()
 	{
-		Debug.Log ("Fire");
-		//Instantiate (bullet, bulletSpawnPos.position, Quaternion.identity);
+		//Debug.Log ("Fire");
+		Instantiate (bullet, bulletSpawnPos.position, Quaternion.identity);
 		Invoke("FireBullet", fireRate);
 	}
 

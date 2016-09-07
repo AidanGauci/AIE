@@ -6,19 +6,24 @@ using System.Collections;
 public class PlayerScript : MonoBehaviour {
 
     //public member variables
-    public int health = 5;
+    public int maxHealth = 5;
+    public int currentHealth;
     public float speed = 5;
     public float fireRate = 1;
+    public float InvulnTime = 1;
+    public float delayTime;
     public Text scoreOutput;
-    public BulletScript bullet;
+    public GameObject bullet;
 
     //private member variables
     private Vector3 pos = new Vector3(0, -3, 0);
     private Vector3 prevPos = new Vector3(0, -3, 0);
     private int score = 0;
+    
     private int m_direction = 0;
     private bool leftPress = false;
     private bool rightPress = false;
+    private bool canFire = true;
     private float screenHalfWidthInWorldUnits;
 	
     //used to initialize shtuff
@@ -26,15 +31,36 @@ public class PlayerScript : MonoBehaviour {
     {
         float halfSelfWidth = transform.localScale.x / 2;
         screenHalfWidthInWorldUnits = Camera.main.aspect * Camera.main.orthographicSize - halfSelfWidth;
+        currentHealth = maxHealth;
     }
 
 	// Update is called once per frame
 	void Update ()
     {
         //end-game stuff
-        if (health <= 0)// || end-game constraints met)
+        if (currentHealth <= 0)// || end-game constraints met)
         {
             EndGame();
+        }
+
+        //deals with fireRate
+        if (canFire == false)
+        {
+            fireRate -= Time.deltaTime;
+        }
+        if (fireRate <= 0)
+        {
+            canFire = true;
+            fireRate = 1;
+        }
+
+        if (delayTime > 0)
+        {
+            delayTime -= Time.deltaTime;
+        }
+        else
+        {
+            delayTime = 0;
         }
 
         //moves player and keeps them in screen
@@ -54,7 +80,13 @@ public class PlayerScript : MonoBehaviour {
     //shoots bullet from player
     public void FireShot(int shoot)
     {
-        
+        if (shoot == 1 && canFire)
+        {
+            Vector3 bulletPos = transform.position + (Vector3.up * 0.1f);
+            Instantiate(bullet, bulletPos, Quaternion.identity);
+
+            canFire = false;
+        }
     }
 
     //moves player according to button input
@@ -108,5 +140,12 @@ public class PlayerScript : MonoBehaviour {
         
     }
 
-   
+   void OnTriggerEnter2D(Collider2D hit)
+    {
+        if (hit.gameObject.tag == "Pickup")
+        {
+            currentHealth = maxHealth;
+            Destroy(hit.gameObject);
+        }
+    }
 }
