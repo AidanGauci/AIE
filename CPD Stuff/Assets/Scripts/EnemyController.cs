@@ -3,14 +3,14 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 
-	public float fireRate = 2f;
-	public int attackDamage = 1;
-	public int health = 2;
 	public Transform bulletSpawnPos;
 	public GameObject bullet;
-	public int currentDirection;
 	public GameObject spawnControl;
+	public int attackDamage = 1;
+	public int health = 2;
+	public int currentDirection;
 	public int LayerID;
+	public float fireRate = 2f;
 	public float directionChangeDelay = 1f;
 	public float timeSinceFlip = 0;
 	public float verticalTimeDelay = 10f;
@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		fireDelay = Random.Range (1, 5);
+		fireDelay = Random.Range (1, 10);
 		Invoke("FireBullet", fireDelay);
 		spawnLink = spawnControl.GetComponent<Spawning>();
 	}
@@ -29,15 +29,11 @@ public class EnemyController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		verticalTimeDelay -= Time.deltaTime;
-<<<<<<< HEAD
 		if (timeSinceFlip < 0)
-=======
-		if (health <= 0)
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
 		{
 			timeSinceFlip = 0;
 		}
-		else
+		else if (timeSinceFlip > 0)
 		{
 			timeSinceFlip -= Time.deltaTime;
 		}
@@ -50,15 +46,15 @@ public class EnemyController : MonoBehaviour {
 		Invoke("FireBullet", fireRate);
 	}
 
-	public bool CheckIfDead()
+	public void CheckIfDead()
 	{
 		if (health == 0)
 		{
-			spawnLink.aliveEnemies--;
+			//spawnLink.aliveEnemies--;
 			Destroy (this);
-			return true;
+			//return true;
 		}
-		return false;
+		//return false;
 	}
 
 	IEnumerator MoveDown()

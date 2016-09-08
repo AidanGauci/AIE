@@ -4,10 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-<<<<<<< HEAD
-=======
   productGUID: c0cd6aba0812fe94a94adeea1f57bd7a
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 2
@@ -17,10 +14,7 @@ PlayerSettings:
   productName: CPD Stuff
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-<<<<<<< HEAD
-=======
   m_SplashScreenStyle: 0
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   m_ShowUnitySplashScreen: 1
   m_VirtualRealitySplashScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -32,11 +26,7 @@ PlayerSettings:
   m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_MobileMTRendering: 0
-<<<<<<< HEAD
-  m_Stereoscopic3D: 0
-=======
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosAppInBackgroundBehavior: 0
@@ -62,10 +52,7 @@ PlayerSettings:
   resizableWindow: 0
   useMacAppStoreValidation: 0
   gpuSkinning: 0
-<<<<<<< HEAD
-=======
   graphicsJobs: 0
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
   xboxEnableKinect: 0
@@ -86,10 +73,7 @@ PlayerSettings:
   uiUse16BitDepthBuffer: 0
   ignoreAlphaClear: 0
   xboxOneResolution: 0
-<<<<<<< HEAD
-=======
   xboxOneMonoLoggingLevel: 0
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   ps3SplashScreen: {fileID: 0}
   videoMemoryForVertexBuffers: 0
   psp2PowerMode: 0
@@ -113,16 +97,9 @@ PlayerSettings:
   bundleVersion: 1.0
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
-<<<<<<< HEAD
-  metroEnableLowLatencyPresentationAPI: 0
-  xboxOneDisableKinectGpuReservation: 0
-  virtualRealitySupported: 0
-  productGUID: c0cd6aba0812fe94a94adeea1f57bd7a
-=======
   xboxOneDisableKinectGpuReservation: 0
   singlePassStereoRendering: 0
   protectGraphicsMemory: 0
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -143,11 +120,8 @@ PlayerSettings:
     m_Bits: 238
   iPhoneSdkVersion: 988
   iPhoneTargetOSVersion: 22
-<<<<<<< HEAD
-=======
   tvOSSdkVersion: 0
   tvOSTargetOSVersion: 900
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
@@ -186,10 +160,7 @@ PlayerSettings:
   iOSLaunchScreeniPadSize: 100
   iOSLaunchScreeniPadCustomXibPath: 
   iOSDeviceRequirements: []
-<<<<<<< HEAD
-=======
   iOSURLSchemes: []
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
@@ -284,10 +255,7 @@ PlayerSettings:
   ps4NPtitleDatPath: 
   ps4RemotePlayKeyAssignment: -1
   ps4RemotePlayKeyMappingDir: 
-<<<<<<< HEAD
-=======
   ps4PlayTogetherPlayerCount: 0
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   ps4EnterButtonAssignment: 1
   ps4ApplicationParam1: 0
   ps4ApplicationParam2: 0
@@ -296,10 +264,7 @@ PlayerSettings:
   ps4DownloadDataSize: 0
   ps4GarlicHeapSize: 2048
   ps4Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
-<<<<<<< HEAD
-=======
   ps4UseDebugIl2cppLibs: 0
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -317,11 +282,8 @@ PlayerSettings:
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0
   ps4attribShareSupport: 0
-<<<<<<< HEAD
-=======
   ps4attribExclusiveVR: 0
   ps4disableAutoHideSplash: 0
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   ps4IncludedModules: []
   monoEnv: 
   psp2Splashimage: {fileID: 0}
@@ -370,10 +332,7 @@ PlayerSettings:
   psp2UseLibLocation: 0
   psp2InfoBarOnStartup: 0
   psp2InfoBarColor: 0
-<<<<<<< HEAD
-=======
   psp2UseDebugIl2cppLibs: 0
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
@@ -403,27 +362,6 @@ PlayerSettings:
   metroFTAFileTypes: []
   metroProtocolName: 
   metroCompilationOverrides: 1
-<<<<<<< HEAD
-  blackberryDeviceAddress: 
-  blackberryDevicePassword: 
-  blackberryTokenPath: 
-  blackberryTokenExires: 
-  blackberryTokenAuthor: 
-  blackberryTokenAuthorId: 
-  blackberryCskPassword: 
-  blackberrySaveLogPath: 
-  blackberrySharedPermissions: 0
-  blackberryCameraPermissions: 0
-  blackberryGPSPermissions: 0
-  blackberryDeviceIDPermissions: 0
-  blackberryMicrophonePermissions: 0
-  blackberryGamepadSupport: 0
-  blackberryBuildId: 0
-  blackberryLandscapeSplashScreen: {fileID: 0}
-  blackberryPortraitSplashScreen: {fileID: 0}
-  blackberrySquareSplashScreen: {fileID: 0}
-=======
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   tizenProductDescription: 
   tizenProductURL: 
   tizenSigningProfileName: 
@@ -486,23 +424,6 @@ PlayerSettings:
   iOS::EnableIncrementalBuildSupportForIl2cpp: 1
   iOS::ScriptingBackend: 1
   boolPropertyNames:
-<<<<<<< HEAD
-  - WebGL::analyzeBuildSize
-  - WebGL::dataCaching
-  - WebGL::useEmbeddedResources
-  - XboxOne::enus
-  WebGL::analyzeBuildSize: 0
-  WebGL::dataCaching: 0
-  WebGL::useEmbeddedResources: 0
-  XboxOne::enus: 1
-  stringPropertyNames:
-  - WebGL::emscriptenArgs
-  - WebGL::template
-  - additionalIl2CppArgs::additionalIl2CppArgs
-  WebGL::emscriptenArgs: 
-  WebGL::template: APPLICATION:Default
-  additionalIl2CppArgs::additionalIl2CppArgs: 
-=======
   - Android::VR::enable
   - Metro::VR::enable
   - N3DS::VR::enable
@@ -608,7 +529,6 @@ PlayerSettings:
   XboxOne::VR::enabledDevices: []
   iOS::VR::enabledDevices: []
   tvOS::VR::enabledDevices: []
->>>>>>> d0bfdf75635243596d5c132181c42be93bac4b37
   cloudProjectId: 
   projectName: 
   organizationId: 
