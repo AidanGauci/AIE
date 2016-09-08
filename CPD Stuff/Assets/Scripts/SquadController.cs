@@ -6,12 +6,11 @@ public class SquadController : MonoBehaviour {
 
 	public Transform bulletSpawnPos;
 	public GameObject bullet;
-	public int currentDirection;
 	public GameObject spawnControl;
+	public int currentDirection;
 	public int LayerID;
 
 	private float screenHalfWidthInWorldUnits;
-
 	private List<EnemyController> activeEnemies = new List<EnemyController>();
 
 	// Use this for initialization
@@ -36,6 +35,7 @@ public class SquadController : MonoBehaviour {
 			{
 				currentEnemy.timeSinceFlip = currentEnemy.directionChangeDelay;
 				currentEnemy.currentDirection *= -1;
+				currentEnemy.timeSinceFlip = currentEnemy.directionChangeDelay;
 				ChangeDirIfYSame (currentEnemy);
 			}
 		}
@@ -46,10 +46,8 @@ public class SquadController : MonoBehaviour {
 			float moveAmount = (1 * currentEnemy.currentDirection) * Time.deltaTime;
 			currentEnemy.transform.position += new Vector3 (moveAmount, 0, 0);
 
-			if (currentEnemy.CheckIfDead ())
-			{
-				i--;
-			}
+			currentEnemy.CheckIfDead ();
+			activeEnemies.Remove (currentEnemy);
 		}
 	}
 

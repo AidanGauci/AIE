@@ -37,6 +37,28 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+		if(Input.GetAxis("Horizontal") > 0)
+		{
+			SwitchOn (1);
+		}
+		else
+		{
+			SwitchOff (-1);
+		}
+
+		if(Input.GetAxis("Horizontal") < 0)
+		{
+			SwitchOn (-1);
+		}
+		else
+		{
+			SwitchOff (-1);
+		}
+
+		if(Input.GetAxisRaw("Fire1") != 0)
+		{
+			FireShot (1);
+		}
         //end-game stuff
         if (currentHealth <= 0)// || end-game constraints met)
         {

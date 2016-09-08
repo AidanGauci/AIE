@@ -4,6 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
+	void Awake()
+	{
+		DontDestroyOnLoad (transform.gameObject);
+	}
+
 	public void LoadGameScene()
 	{
 		SceneManager.LoadScene ("BaseScene");
@@ -11,13 +16,13 @@ public class GameController : MonoBehaviour {
 
 	public void LoadMainMenu()
 	{
-		SceneManager.LoadScene ("BaseScene");
+		SceneManager.LoadScene ("MainMenu");
 	}
 
 
 	public void LoadEndMenu()
 	{
-		SceneManager.LoadScene ("BaseScene");
+		SceneManager.LoadScene ("EndMenu");
 	}
 
 	public void QuitGame()

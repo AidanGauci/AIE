@@ -6,10 +6,11 @@ public class Spawning : MonoBehaviour {
 	public GameObject[] enemies;
 	public GameObject player;
 	public int aliveEnemies = 0;
+
 	private int currentLevel = 0;
 	private int maxLevel = 5;
-	private bool b_LoadingLevel = false;
 	private int currentMoveDir = -1;
+	private bool b_LoadingLevel = false;
 
 	// Use this for initialization
 	void Start () {
@@ -25,9 +26,10 @@ public class Spawning : MonoBehaviour {
 		}
 	}
 
+	// 
 	void ChangeMoveDir ()
 	{
-		currentMoveDir *= -1;
+		//currentMoveDir *= -1;
 	}
 
 
