@@ -46,8 +46,11 @@ public class SquadController : MonoBehaviour {
 			float moveAmount = (1 * currentEnemy.currentDirection) * Time.deltaTime;
 			currentEnemy.transform.position += new Vector3 (moveAmount, 0, 0);
 
-			currentEnemy.CheckIfDead ();
-			activeEnemies.Remove (currentEnemy);
+			if (currentEnemy.CheckIfDead ())
+			{
+				Destroy (currentEnemy.gameObject);
+				activeEnemies.Remove (currentEnemy);
+			}
 		}
 	}
 

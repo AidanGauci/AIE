@@ -46,15 +46,13 @@ public class EnemyController : MonoBehaviour {
 		Invoke("FireBullet", fireRate);
 	}
 
-	public void CheckIfDead()
+	public bool CheckIfDead()
 	{
 		if (health == 0)
 		{
-			//spawnLink.aliveEnemies--;
-			Destroy (this);
-			//return true;
+			return true;
 		}
-		//return false;
+		return false;
 	}
 
 	IEnumerator MoveDown()
